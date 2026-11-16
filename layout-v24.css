@@ -115,3 +115,37 @@ body[data-dd-group=personal].dd-group-open #v12GroupPanel .v12-group-title{color
 body.v11-light[data-dd-group=discover].dd-group-open #v12GroupPanel .v12-group-title{color:#0f6f84}
 body.v11-light[data-dd-group=deep].dd-group-open #v12GroupPanel .v12-group-title{color:#6a3fb0}
 body.v11-light[data-dd-group=personal].dd-group-open #v12GroupPanel .v12-group-title{color:#9a6510}
+
+/* Install app button and dialog */
+.dd-install-btn{background:#f0c878!important;border-color:#f0c878!important;color:#1a1730!important;font-weight:700}
+.dd-install-btn[hidden],.dd-install-cta[hidden]{display:none!important}
+.dd-install-cta{display:block;margin:22px auto 0;background:transparent;border:1px dashed #8a97cf;color:#dfe5ff;border-radius:999px;padding:10px 18px;font-size:14px}
+.dd-install-cta:hover{background:#26325f}
+body.dd-group-open .dd-install-cta{display:none}
+@media(max-width:520px){.dd-install-btn span{display:none}}
+.dd-modal{position:fixed;inset:0;z-index:20000;background:#050915cc;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:16px}
+.dd-modal.hidden{display:none}
+body.dd-modal-open{overflow:hidden}
+.dd-modal-card{position:relative;width:min(520px,100%);max-height:92dvh;overflow:auto;background:#172742;border:1px solid #5a6aa6;border-radius:22px;padding:26px 24px;box-shadow:0 20px 60px #0008;color:#eef2ff}
+.dd-modal-x{position:absolute;top:12px;right:12px;background:transparent!important;border:0!important;font-size:18px;padding:6px 10px}
+.dd-modal-icon{width:64px;height:64px;border-radius:16px;display:block;margin:0 0 12px}
+.dd-modal-card h2{margin:0 0 6px;font-size:24px}
+.dd-modal-sub{margin:0 0 16px;color:#c3cde8;font-size:14.5px}
+.dd-install-now{width:100%;margin:0 0 16px;font-size:16px}
+.dd-tabs{display:flex;gap:6px;background:#0e1a30;border-radius:12px;padding:4px;margin:0 0 14px}
+.dd-tabs button{flex:1;background:transparent;border:0;padding:9px 6px;font-size:14px;border-radius:9px}
+.dd-tabs button.active{background:#f0c878;color:#1a1730;font-weight:700}
+.dd-steps{margin:0 0 18px;padding-left:22px;line-height:1.55}
+.dd-steps li{margin:0 0 9px}
+.dd-ico{display:inline-block;padding:0 5px;border:1px solid #6a7bb5;border-radius:6px;font-size:13px}
+.dd-share{border-top:1px solid #3c4d7a;padding-top:14px}
+.dd-share>span{font-size:13px;font-weight:700;color:#f0d59a}
+.dd-share-row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.dd-share-row input{flex:1;min-width:200px;font-size:13.5px;padding:10px}
+.dd-share-row button{white-space:nowrap}
+body.v11-light .dd-install-cta{color:#2a3b55;border-color:#9aa8c8}
+body.v11-light .dd-modal-card{background:#fff;color:#1d2d3d;border-color:#cdd7ea}
+body.v11-light .dd-modal-sub{color:#4a5d74}
+body.v11-light .dd-tabs{background:#eef2f8}
+body.v11-light .dd-share{border-color:#dbe3ef}
+body.v11-light .dd-share>span{color:#8a5a12}
