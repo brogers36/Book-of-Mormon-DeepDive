@@ -1,0 +1,100 @@
+/* DeepDive 22: consistent, less scattered layout */
+body.dd22>header{display:none}
+body.dd22 .wrap{max-width:1080px;padding:0 14px 70px}
+
+/* Sticky top bar: brand · home · language/theme, then section tabs */
+body.dd22 .v12-nav{flex-wrap:wrap;gap:8px 10px;padding:10px 4px 0;margin:0 0 18px;border-bottom:1px solid #3d4c7e}
+body.dd22 .v12-nav #v12Breadcrumb{display:none}
+body.dd22 .dd-brand{background:none!important;border:0!important;padding:6px 4px!important;font:700 20px Georgia,serif;color:#fff1d0;letter-spacing:-.01em}
+body.dd22 .dd-brand span{color:#fff1d0}
+body.dd22 .v12-nav #v12Home{padding:8px 12px;font-size:14px}
+body.dd22 .dd-sections{order:10;flex-basis:100%;display:flex;flex-wrap:wrap;gap:4px 16px;padding:8px 2px 10px;scrollbar-width:thin}
+body.dd22.dd-home .dd-sections{display:none}
+body.dd22 .dd-group{display:flex;align-items:center;gap:4px;flex-shrink:0}
+body.dd22 .dd-group-label{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9fb0e6;margin-right:4px;white-space:nowrap}
+body.dd22 .dd-sections button{background:transparent;border:1px solid transparent;color:#d8def8;font-size:14px;padding:6px 10px;border-radius:999px;white-space:nowrap}
+body.dd22 .dd-sections button:hover{background:#26325f;border-color:#5a68a6}
+body.dd22 .dd-sections button.active{background:#f0c878;border-color:#f0c878;color:#1a1730;font-weight:700}
+
+/* One panel width and rhythm everywhere */
+body.dd22 main>section>.panel,body.dd22 #explore #studyPanel{max-width:none!important;width:100%;margin:0 0 18px!important;padding:26px 28px;border-radius:20px}
+body.dd22 main>section>.panel>h2{font-size:26px;margin:0 0 6px}
+body.dd22 .panel>.v10-eyebrow{display:none}
+
+/* Page intro: one short line instead of stacked boxes */
+body.dd22 .v19-section-guide{background:none!important;border:0!important;padding:0!important;margin:0 0 10px}
+body.dd22 .v19-section-guide strong{display:none}
+body.dd22 .v19-section-guide p{margin:0;font-size:14.5px;font-weight:600;color:#f0d59a!important}
+body.dd22 .panel>p.muted{font-size:14.5px;margin:0 0 18px;max-width:78ch}
+body.dd22 #map .v9-intro{background:none!important;border:0!important;padding:0!important;margin:0 0 16px}
+body.dd22 #map .v9-intro p{margin:0 0 4px;font-size:14.5px;color:var(--muted)}
+body.dd22 .panel>label,body.dd22 .v10-two>div>label{display:block;font-size:13px;font-weight:650;color:#c6d2ee;margin:0 0 6px}
+
+/* Scripture cards: compact, with one consistent row of actions */
+body.dd22 .verse{max-width:none!important;padding:16px 18px;margin:10px 0;border-radius:14px}
+body.dd22 .verse strong{font-size:16px}
+body.dd22 .verse p.scripture-summary{margin:6px 0 10px;font-size:15px}
+body.dd22 .verse .flex{margin-top:8px!important;gap:8px}
+body.dd22 .verse a[target],body.dd22 .verse button{display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:7px 13px!important;font-size:13.5px!important;font-weight:650;border-radius:999px!important;border:1px solid #5a6f96!important;background:#22344f!important;color:#e9efff!important;text-decoration:none;line-height:1.2;margin:4px 8px 0 0}
+body.dd22 .verse a[target]{border-color:#6fb7cf!important;color:#bfeaf7!important}
+body.dd22 .verse a[target]:hover,body.dd22 .verse button:hover{background:#2f4b70!important}
+
+/* Cards and folds */
+body.dd22 .v10-card{padding:20px 22px;border-radius:16px}
+body.dd22 .v10-card>h3{font-size:22px}
+body.dd22 .dd-fold,body.dd22 .v19-disclosure{border:1px solid #4a6286;background:#182c45;border-radius:16px;margin:16px 0 0;padding:0 18px}
+body.dd22 .dd-fold>summary,body.dd22 .v19-disclosure>summary{cursor:pointer;padding:15px 0;list-style:none;display:flex;align-items:center;gap:10px;color:#ffe1a5;font-weight:750}
+body.dd22 .dd-fold>summary::-webkit-details-marker,body.dd22 .v19-disclosure>summary::-webkit-details-marker{display:none}
+body.dd22 .dd-fold>summary:before,body.dd22 .v19-disclosure>summary:before{content:"▸";transition:transform .15s}
+body.dd22 .dd-fold[open]>summary:before,body.dd22 .v19-disclosure[open]>summary:before{transform:rotate(90deg)}
+body.dd22 .dd-fold>summary h3{margin:0;font-size:17px;color:#ffe1a5}
+body.dd22 .dd-fold[open],body.dd22 .v19-disclosure[open]{padding-bottom:18px}
+body.dd22 .dd-compare-row{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center;margin:10px 0}
+body.dd22 .v10-two{gap:14px}
+
+/* Selectors and chips */
+body.dd22 .chips{gap:7px;margin:14px 0 0}
+body.dd22 .chips button{font-size:13.5px;padding:7px 12px;border-radius:999px}
+body.dd22 .v9-choices{max-height:none!important;overflow:visible!important;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))!important}
+body.dd22 .v9-choice{padding:10px 12px}
+
+/* Footer */
+body.dd22 footer{margin-top:10px;font-size:12.5px}
+
+/* Light theme */
+body.dd22.v11-light .v12-nav{border-color:#cdd7ea}
+body.dd22.v11-light .dd-brand,body.dd22.v11-light .dd-brand span{color:#21354b}
+body.dd22.v11-light .dd-group-label{color:#5f6f93}
+body.dd22.v11-light .dd-sections button{color:#2a3b55}
+body.dd22.v11-light .dd-sections button:hover{background:#dde6f6;border-color:#b9c7e2}
+body.dd22.v11-light .dd-sections button.active{background:#c9952f;border-color:#c9952f;color:#fff}
+body.dd22.v11-light .v19-section-guide p{color:#8a5a12!important}
+body.dd22.v11-light .panel>label,body.dd22.v11-light .v10-two>div>label{color:#3d5068}
+body.dd22.v11-light .verse a[target],body.dd22.v11-light .verse button{background:#eef3fa!important;color:#22364f!important;border-color:#b8c7dc!important}
+body.dd22.v11-light .verse a[target]{color:#0f5f75!important;border-color:#8cc3d3!important}
+body.dd22.v11-light .dd-fold,body.dd22.v11-light .v19-disclosure{background:#f2f6fb;border-color:#cdd9e8}
+body.dd22.v11-light .dd-fold>summary,body.dd22.v11-light .dd-fold>summary h3,body.dd22.v11-light .v19-disclosure>summary{color:#7a4e0e}
+
+/* Phones */
+@media(max-width:700px){
+ body.dd22 .v12-nav{position:sticky}
+ body.dd22 .dd-brand{font-size:17px}
+ body.dd22 .dd-sections{gap:6px 16px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+ body.dd22 main>section>.panel,body.dd22 #explore #studyPanel{padding:18px 16px}
+ body.dd22 main>section>.panel>h2{font-size:22px}
+ body.dd22 .dd-compare-row{grid-template-columns:1fr}
+}
+
+/* Journal: show "Import journal" as a normal button instead of a raw file field */
+body.dd22 #journal label:has(#importNotes){display:inline-flex;align-items:center;padding:11px 15px;border:1px solid #49607b;border-radius:10px;background:var(--panel2);font-size:inherit;font-weight:400;color:var(--text);margin:0}
+body.dd22 #journal label:has(#importNotes):hover{background:#31527b}
+body.dd22 #importNotes{position:absolute;width:1px!important;height:1px;opacity:0;overflow:hidden;padding:0;border:0}
+body.dd22 #journal input#noteTitle{margin-bottom:10px}
+
+/* Light theme: keep top-bar buttons, topic chips and gold headings readable */
+body.dd22.v11-light .v12-nav button:not(.dd-brand):not([data-dd-go]){background:#fff!important;color:#21354b!important;border:1px solid #c4d0e4!important}
+body.dd22.v11-light .v12-nav #v12Home{background:#dff1f6!important;border-color:#8cc3d3!important}
+body.dd22.v11-light .chips button,body.dd22.v11-light .v10-voice-grid button,body.dd22.v11-light .v10-timeline button{background:#eef3fa!important;color:#22364f!important;border-color:#c4d0e4!important}
+body.dd22.v11-light .chips button:hover,body.dd22.v11-light .chips button.active{background:#dbe6f4!important}
+body.dd22.v11-light .panel h3,body.dd22.v11-light .panel h4,body.dd22.v11-light .verse strong{color:#7a4e0e!important}
+body.dd22.v11-light .v12-choice small{color:#f4f1ffdd!important}
