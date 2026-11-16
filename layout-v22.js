@@ -40,6 +40,20 @@ document.querySelectorAll('main>section').forEach(s=>new MutationObserver(markAc
 $('v12Language')?.addEventListener('click',()=>setTimeout(renderNav,30));
 renderNav();
 
+
+/* Home: choosing Discover / Go deeper / My study opens its own screen instead of a list below the cards. */
+const DESC={explore:['Pick a theme and read curated passages','Elige un tema y lee pasajes seleccionados'],map:['See how topics connect in a constellation','Mira cómo se conectan los temas en una constelación'],search:['Search the full text for a word or phrase','Busca una palabra o frase en todo el texto'],research:['Study one topic through different lenses','Estudia un tema desde distintos enfoques'],linguistic:['Compare the voices of Nephi, Jacob, Alma, Mormon and Moroni','Compara las voces de Nefi, Jacob, Alma, Mormón y Moroni'],zion:['Wealth, poverty, prejudice and community','Riqueza, pobreza, prejuicios y comunidad'],imperfection:['Weakness, grace and growth','Debilidad, gracia y crecimiento'],path:['Follow a ready-made path step by step','Sigue paso a paso una ruta preparada'],builder:['Choose topics and build your own path','Elige temas y crea tu propia ruta'],quiz:['Match scriptures to their topics','Relaciona escrituras con sus temas'],journal:['Write and save your reflections','Escribe y guarda tus reflexiones']};
+const groupPanel=$('v12GroupPanel');
+function decorate(){if(!groupPanel)return;groupPanel.querySelectorAll('[data-v12-go]').forEach(b=>{const d=DESC[b.dataset.v12Go],span=b.querySelector('span');if(d&&span){const t=L(d[0],d[1])+' →';if(span.textContent!==t)span.textContent=t}})}
+function openGroup(g){document.body.classList.add('dd-group-open');document.body.dataset.ddGroup=g||'';decorate();window.scrollTo({top:0});try{if(!history.state||!history.state.ddGroup)history.pushState({ddGroup:g},'')}catch(e){}}
+function closeGroup(fromPop){if(!document.body.classList.contains('dd-group-open'))return;document.body.classList.remove('dd-group-open');groupPanel?.classList.add('hidden');document.querySelector('.v12-choice-grid')?.classList.remove('hidden');window.scrollTo({top:0});if(!fromPop){try{if(history.state&&history.state.ddGroup)history.back()}catch(e){}}}
+document.querySelectorAll('[data-v12-group]').forEach(b=>b.addEventListener('click',()=>setTimeout(()=>openGroup(b.dataset.v12Group),0)));
+groupPanel?.addEventListener('click',e=>{if(e.target.closest('#v12Back'))closeGroup(false);else if(e.target.closest('[data-v12-go]')){document.body.classList.remove('dd-group-open')}});
+$('v12Home')?.addEventListener('click',()=>closeGroup(false));
+brand.addEventListener('click',()=>closeGroup(false));
+window.addEventListener('popstate',()=>closeGroup(true));
+if(groupPanel)new MutationObserver(decorate).observe(groupPanel,{childList:true,subtree:true,characterData:true});
+
 /* Research: put each optional tool in its own clearly labelled fold. */
 const research=document.querySelector('#research .panel');
 if(research){
