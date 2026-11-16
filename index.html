@@ -188,4 +188,12 @@ document.getElementById('v9MapTopic').onchange=constellation;
 document.getElementById('v12Language')?.addEventListener('click',()=>setTimeout(constellation,150));
 constellation();
 })();
-</script></body></html>
+</script><style>
+/* V17 enlarged constellation viewport */
+#map .panel{max-width:none;width:100%}
+#map .v9-columns{grid-template-columns:minmax(0,2.4fr) minmax(230px,1fr);align-items:start}
+#v9MapCanvas{min-height:690px!important}
+#v9MapCanvas svg{min-height:690px;max-height:85vh;object-fit:contain}
+@media(max-width:900px){#map .v9-columns{grid-template-columns:1fr}#v9MapCanvas{min-height:540px!important}#v9MapCanvas svg{min-height:540px;max-height:none}}
+@media(max-width:550px){#map .panel{padding:12px}#v9MapCanvas{min-height:480px!important}#v9MapCanvas svg{min-height:480px;width:100%;height:auto}#map .v9-columns{gap:12px}}
+</style></body></html>
