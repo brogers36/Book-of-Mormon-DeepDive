@@ -1,0 +1,28 @@
+/* DeepDive 19: focus-first workspaces and touch-friendly atlas */
+#map .v9-columns{display:block!important}
+.v18-atlas{width:100%;border-radius:20px;overflow:hidden}
+.v18-atlas #v9MapCanvas{height:min(76vh,780px);min-height:460px!important;touch-action:none;overscroll-behavior:contain;user-select:none}
+.v18-atlas #v9MapCanvas svg{width:100%;height:100%;min-height:0!important;max-height:none!important;display:block;touch-action:none;transform:none!important}
+.v18-atlas:fullscreen #v9MapCanvas{height:auto;min-height:0!important;flex:1}
+.v18-atlas:fullscreen{width:100vw;height:100dvh;max-height:none;z-index:10000}
+.v18-atlas.v19-fullscreen{position:fixed!important;inset:0;width:100vw;height:100dvh;z-index:10000;background:#080d27;display:flex;flex-direction:column;border-radius:0}
+.v18-atlas.v19-fullscreen #v9MapCanvas{flex:1;height:auto;min-height:0!important}
+.v18-atlas .v18-toolbar{flex-wrap:wrap;justify-content:center;position:relative;z-index:2}
+.v18-atlas .v18-toolbar button{min-width:45px;min-height:44px}
+#v9MapDetails{margin-top:18px;padding:18px;background:#192d48;border:1px solid #5c6da6;border-radius:18px}
+.v19-context{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:0 0 16px;padding:11px 14px;background:#172947;border:1px solid #425c85;border-radius:14px}
+.v19-context strong{color:#ffe0a5;font-size:13px}
+.v19-context button{font-size:13px;padding:8px 12px}
+.v19-section-guide{margin-bottom:15px;background:linear-gradient(120deg,#203e58,#292f5b);border:1px solid #6b7ab5;border-radius:14px;padding:14px 17px}
+.v19-section-guide strong{color:#ffe3b3}
+.v19-section-guide p{margin:5px 0 0;font-size:14px;color:#d9e7fa}
+.v19-disclosure{border:1px solid #506b8e;background:#1a304a;border-radius:15px;margin:15px 0;padding:0 15px}
+.v19-disclosure summary{cursor:pointer;padding:15px 3px;color:#ffe1a5;font-weight:750}
+.v19-disclosure[open]{padding-bottom:15px}
+#studyVerses .verse{max-width:860px}
+#explore #studyPanel,#research .panel,#linguistic .panel,#zion .panel,#imperfection .panel{max-width:1050px;margin-left:auto;margin-right:auto}
+#v9MapCanvas:focus-visible{outline:3px solid #ffe6b2}
+.v19-status{font-size:12px;text-align:center;color:#c8d9f6;margin:7px 0}
+body.v11-light .v19-context,body.v11-light .v19-section-guide,body.v11-light .v19-disclosure{background:#e9f2fc;color:#263b53}
+body.v11-light .v19-section-guide p{color:#38526b}
+@media(max-width:600px){.v18-atlas #v9MapCanvas{height:65dvh;min-height:350px!important}.v19-context{padding:9px}.v19-section-guide{padding:12px}}
