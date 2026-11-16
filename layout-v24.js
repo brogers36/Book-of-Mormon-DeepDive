@@ -53,6 +53,9 @@ $('v12Home')?.addEventListener('click',()=>closeGroup(false));
 brand.addEventListener('click',()=>closeGroup(false));
 window.addEventListener('popstate',()=>closeGroup(true));
 if(groupPanel)new MutationObserver(decorate).observe(groupPanel,{childList:true,subtree:true,characterData:true});
+/* Safety net: whenever the group list becomes visible by any route, show it as its own screen. */
+if(groupPanel)new MutationObserver(()=>{const shown=!groupPanel.classList.contains('hidden');const open=document.body.classList.contains('dd-group-open');if(shown&&!open){const t=groupPanel.querySelector('.v12-group-title')?.textContent||'';const g=[...document.querySelectorAll('[data-v12-group]')].find(b=>b.querySelector('strong')?.textContent===t)?.dataset.v12Group;openGroup(g)}else if(!shown&&open){document.body.classList.remove('dd-group-open')}}).observe(groupPanel,{attributes:true,attributeFilter:['class']});
+if(groupPanel&&!groupPanel.classList.contains('hidden'))openGroup();
 
 /* Research: put each optional tool in its own clearly labelled fold. */
 const research=document.querySelector('#research .panel');
